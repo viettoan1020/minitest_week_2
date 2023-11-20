@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng các số nguyên tố trong mảng</title>
+</head>
+<body>
+<script>
+    let arr = [3, 4, 7, 8];
+    let sumSNT = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 1) {
+            let isPrime = true;
+            for (let j = 2; j <= Math.sqrt(arr[i]); j++) {
+                if (arr[i] % j === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                sumSNT += arr[i];
+            }
+        }
+    }
+
+    document.write("Tổng của các số nguyên tố trong mảng đã cho trước là " + sumSNT);
+</script>
+</body>
+</html>

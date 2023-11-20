@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số lượng các số chẵn trong mảng</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = parseInt(prompt("Nhập số phần tử của mảng: "));
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt("Nhập phần tử thứ " + i + " của mảng"));
+    }
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+        if (arr[i]%2 === 0 ) {
+            count++;
+        }
+    }
+    document.write("Có " + count + " số chẵn trong mảng bạn đã nhập vào");
+</script>
+</body>
+</html>
